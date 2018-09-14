@@ -1,0 +1,21 @@
+// Fonts
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ @font-face {
+
+    font-family: 'bryant-regular';
+    src: url("./fonts/bryant/BryantRegular.ttf") format("truetype");
+    
+ }
+
+ @font-face {
+
+    font-family: 'core-mellow';
+    src: url("./fonts/core-mellow/CoreMellow47CnRegular.otf") format("opentype");
+    
+ }
+
+
+// Primary Fonts
+$font-main: 'bryant-regular', sans-serif;
+$font-secondary: 'core-mellow', sans-serif;

@@ -1,0 +1,109 @@
+// Base Styles
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// NOTE
+// html is set to 62.5% so that all the REM measurements throughout Skeleton
+// are based on 10px sizing. So basically 1.5rem = 15px :)
+
+html {
+
+  font-size: 62.5%;
+  height: 100%;
+
+}
+
+body {
+
+  font-size: 1.5rem; // currently ems cause chrome bug misinterpreting rems on body element
+  line-height: 1.6;
+  font-weight: 400;
+
+}
+
+#app {
+
+  position: relative;
+
+}
+h1, h4 {
+
+  font-family: $font-main;
+  text-transform: uppercase;
+
+}
+
+h4 {
+
+  color: #c1c1c3;
+
+}
+
+// form
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+input {
+
+  border: none;
+  border-bottom: 1px solid $lighter;
+  color: $gray;
+  font-size: 3.5rem;
+  font-family: $font-secondary;
+  text-align: center;
+  width: 100%;
+  
+}
+
+// hide focus blue box
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+
+    outline: none;
+
+}
+
+// hide number type input btn
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+
+}
+
+//placeholder input color
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+  color: lighten($gray, 20%);
+  opacity: 1; /* Firefox */
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+  color: lighten($gray, 20%);
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+
+  color: lighten($gray, 20%);
+
+}
+
+// Header
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+header {
+
+  margin-bottom: 3rem;
+
+}
+
+// Misc
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+div, header, footer {
+
+  box-sizing: border-box;
+
+}

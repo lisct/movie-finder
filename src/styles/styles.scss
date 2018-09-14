@@ -1,0 +1,17 @@
+
+/* General vars*/
+
+$pink: #f95184;
+$lighter: #e5e5e5;
+$gray: #6c6d6f;
+
+/* Base files. */
+@import "base/font";
+@import "base/base-styles";
+@import "components/home-page";
+@import "components/insert-bill";
+@import "components/select-tip";
+@import "components/waves";
+@import "components/result";
+
+

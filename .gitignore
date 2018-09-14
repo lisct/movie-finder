@@ -1,0 +1,10 @@
+#Compile Files
+/node_modules
+/public/CNAME
+/public/css
+/public/js
+.vscode
+
+#OS junk files
+[Tt]humbs.db
+.DS_Store
