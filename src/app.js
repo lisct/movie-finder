@@ -57,7 +57,9 @@ function filterData(data){
     const result = data.map(data => ({ 
             name: data.title, 
             image: data.poster_path, 
-            date: data.release_date 
+            date: data.release_date,
+            overview: data.overview,
+            rating: data.vote_average
         }) 
     );
 
@@ -66,15 +68,20 @@ function filterData(data){
 
 // adding data to the HTML
 function creatingContent(data){
-
+    
     const movie_name = data.map((data) => { 
+
+        const { name, image, date, overview, rating } = data;
+
         return (
-            data.name && data.image && 
+            name && image && 
             `<div class="movie__item">
-                <h1 class="movie__title">${data.name} 
-                    <span class="movie__year">${parseInt(data.date)}</span>
+                <p>${rating}</p>
+                <h1 class="movie__title">${name} 
+                    <span class="movie__year">${parseInt(date)}</span>
                 </h1>
-                <img class="movie__image" src="${imgUrl + data.image}">
+                <p>${overview}<p>
+                <img class="movie__image" src="${imgUrl + image}">
             </div>` 
         ) 
 

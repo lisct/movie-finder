@@ -4,13 +4,7 @@ http://moviefinder.surge.sh
 
 ## Description
 
-```bash
-This application find movies that match with 
-the search text that has been introduced. 
-This application use the API from  
-https://www.themoviedb.org API 
-The main porpuse was to practice with xhr request.
-```
+This application finds movies that match with the search text that has been introduced.This application use the API from https://www.themoviedb.org API The main porpuse was to practice with xhr request.
 
 ## Repository
 
