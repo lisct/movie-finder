@@ -38,9 +38,9 @@ module.exports = (env) => {
           }),
         },
         { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-          use: "url-loader?limit=10000&mimetype=application/font-woff&name=&name=/css/webfonts/[name].[ext]" 
+          use: "url-loader?limit=10000&mimetype=application/font-woff&name=&name=/css/webfonts/[name].[ext]"  
         },
-        { test: /\.(ttf|eot|svg|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+        { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
           use: "file-loader?limit=10000&mimetype=application/font-woff&name=&name=/css/webfonts/[name].[ext]" 
         }
       ],

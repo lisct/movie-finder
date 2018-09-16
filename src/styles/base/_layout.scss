@@ -1,0 +1,172 @@
+// layout Styles
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+#wrapper-container {
+
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 3rem 5rem 0 5rem;
+  
+  }
+
+.bg__container{
+
+    background: $lighter;
+    border-bottom: 1px solid #d5dbe0;
+    padding: 5rem 0;
+}
+
+.movie{
+
+    &__description,  &__title{
+
+        margin: 0;
+
+    }
+
+    &__description{
+
+        text-transform: uppercase;
+        font-size: 1.1em;
+    }
+
+   &__title{
+
+        font-family: $font-main-bold;
+        font-size: 2.5em;
+        color: $yellow;
+
+    } 
+
+    &__search{
+
+        margin: 3rem 0;
+
+        &--input{
+
+            border-radius: 3px;
+            border: 1px solid $gray-light;
+            font-size: 1.3em;
+            font-family: $font-main;
+            text-transform: uppercase;
+            padding: 1.4rem 0;
+            letter-spacing: 0.03em;
+            
+            
+        }
+        
+
+    }
+
+    &__item{
+        
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        position: relative;
+        margin: 12rem 0;
+
+        @media (min-width: $desktop) {
+
+            flex-direction: row;
+        
+        }
+
+
+        &:before{
+            content: '';
+
+            background-color: $yellow;
+            border-radius: 7px;
+            height: 80%;
+            top: -33px;
+            padding: 3rem 4rem;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+
+            @media (min-width: $desktop) {
+
+                height: 100%;
+                left: -33px;
+                padding: 3rem 0;
+                width: 380px;
+            
+            }
+            
+        }
+    }
+
+    &__poster{
+
+        &--image{
+
+            border-radius: 7px;
+            border: 7px solid white;
+            position: relative;
+            margin: 3rem 0 3rem  0;
+            box-shadow: 0 10px 25px -10px rgba(0,0,0,.28);
+
+            @media (min-width: $desktop) {
+
+                margin: 0;
+
+            }
+
+        }
+
+        &--description{
+
+            background: white;
+            border-radius: 7px;
+            padding: 2rem 3rem;
+            box-shadow: 0 10px 25px -10px rgba(0,0,0,.28);
+
+            @media (min-width: $desktop) {
+
+                border-radius: 0;
+                border-top-right-radius: 7px;
+                border-bottom-right-radius: 7px;
+            
+            }
+
+        }
+
+        &--info{
+            color: $yellow;
+            font-size: 1.1em;
+        }
+
+        &--year{
+
+            margin-right: 15px;
+
+        }
+        
+        &--rating{}
+
+        &--start{
+            width: 16px;  
+        }
+
+        &--info, &--title,  &--overview{
+
+            margin: 0;
+
+        }
+
+        &--title{
+
+            font-family: $font-main-bold;
+            font-size: 1.7em;
+            letter-spacing: 0.05em;
+            margin: 0.5em 0;
+
+        }
+
+        &--overview{}
+    }
+    
+}

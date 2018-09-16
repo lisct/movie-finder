@@ -1,21 +1,20 @@
 // Fonts
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
- @font-face {
+@font-face {
 
-    font-family: 'bryant-regular';
-    src: url("./fonts/bryant/BryantRegular.ttf") format("truetype");
+    font-family: 'avenir-next-regular';
+    src: url("./fonts/avenir_next/avenir-next-regular.ttf") format("truetype");
     
  }
 
  @font-face {
 
-    font-family: 'core-mellow';
-    src: url("./fonts/core-mellow/CoreMellow47CnRegular.otf") format("opentype");
-    
- }
+    font-family: 'avenir-next-bold';
+    src: url("./fonts/avenir_next/avenir-next-bold.ttf") format("truetype");
 
+ }
 
 // Primary Fonts
-$font-main: 'bryant-regular', sans-serif;
-$font-secondary: 'core-mellow', sans-serif;
+$font-main: 'avenir-next-regular', sans-serif;
+$font-main-bold: 'avenir-next-bold', sans-serif;
