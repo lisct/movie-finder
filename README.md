@@ -4,7 +4,7 @@ http://moviefinder.surge.sh
 
 ## Description
 
-This application finds movies that match with the search text that has been introduced.This application use the API from https://www.themoviedb.org API The main porpuse was to practice with xhr request.
+This application finds movies that match with the search text that has been introduced.This application use the API from https://www.themoviedb.org API. The main porpuse of this was to practice with xhr request and promises.
 
 ## Repository
 
@@ -24,12 +24,6 @@ yarn run build:dev or npm run build:dev
 
 ```bash
 yarn run dev-server or npm run dev-server
-```
-
-alternative to 3 Run Server (Development Live changes)
-
-```bash
-yarn run server or npm run server
 ```
 
 Running local

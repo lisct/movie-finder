@@ -1,8 +1,6 @@
 import './styles/styles.scss';
 import 'normalize.css/normalize.css';
 
-console.log("hello");
-
 // API documentation https://developers.themoviedb.org/3/search/search-movies
 
 const url = 'https://api.themoviedb.org/3/search/movie?api_key='
@@ -11,6 +9,9 @@ const api_key = 'dae147a76e031387fb1cf6e529519d20';
 const imgUrl = ' http://image.tmdb.org/t/p/w300/'; 
 const input = document.querySelector('.movie__search--input');
 const movie_items = document.querySelector('.movie__items');
+const clear = document.querySelector('.movie__search--icon');
+
+window.onload = function() { input.focus() } // focus the input on load
 
 // Requesting data 
 function fetchData(url) {
@@ -88,11 +89,21 @@ function filterData(data){
     creatingContent(result);
 }
 
+// clear input when click the x btn
+function clearInput(){
+
+    clear.style.display = 'none'; // hide clear btn
+    input.value = ''; // clear input
+    movie_items.innerHTML = ''; // clear movies   
+
+}
 
 // EVENT LISTENER 
 
 input.addEventListener('change', getMovieName );
 input.addEventListener('keyup', getMovieName );
+input.addEventListener('mouseover', () => input.focus());
+clear.addEventListener('mousedown', clearInput);
 
 function getMovieName(){
    
@@ -102,7 +113,10 @@ function getMovieName(){
     const dofetch =  input.value !== '' && input.value !== undefined;
 
     // do the fetch if the input value is not empty and not undefined
-    if( dofetch ) {
+    if( dofetch) {
+
+        // appear clear btn
+        clear.style.display = 'block';
 
         // promise all return an array with the responses messages
         // is a sequense when one load then load other
@@ -116,15 +130,23 @@ function getMovieName(){
             // when data returns
             const results = data[0].results;
             
-            filterData(results)
-            
+            // if results is empty
+            if(Object.keys(results).length === 0){
+
+                movie_items.innerHTML = '<p>No results has been found</p>';
+
+            }else{
+
+                filterData(results);
+
+            }
+
         })
 
     }else{
 
-        // empty the search div
-        movie_items.innerHTML = '';
-
+        clearInput();
+       
     }
 
 }

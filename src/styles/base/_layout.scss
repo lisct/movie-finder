@@ -35,13 +35,13 @@
 
         font-family: $font-main-bold;
         font-size: 2.5em;
-        color: $yellow;
 
     } 
 
     &__search{
 
         margin: 3rem 0;
+        position: relative;
 
         &--input{
 
@@ -52,11 +52,39 @@
             text-transform: uppercase;
             padding: 1.4rem 0;
             letter-spacing: 0.03em;
+
+            &:focus{
+
+                border: 1px solid $yellow;
+                
+            }
             
             
         }
-        
 
+        &--icon{
+
+            bottom: 0;
+            display: none;
+            cursor: pointer;
+            height: 24px;
+            position: absolute;
+            margin: auto;
+            right: 12px;
+            top: 0;
+            width: 24px;
+            opacity: .8;
+            transform: rotate(0deg);
+            transition: all .2s ease-in-out;
+    
+            &:hover{
+
+                opacity: 1;
+                transform: rotate(180deg);
+
+            }
+        }
+        
     }
 
     &__item{
@@ -78,7 +106,7 @@
         &:before{
             content: '';
 
-            background-color: $yellow;
+            background-color: $darker;
             border-radius: 7px;
             height: 80%;
             top: -33px;
@@ -144,8 +172,8 @@
             margin-right: 15px;
 
         }
-        
-        &--rating{}
+
+        //&--rating{}
 
         &--start{
             width: 16px;  
@@ -166,7 +194,7 @@
 
         }
 
-        &--overview{}
+        //&--overview{}
     }
     
 }
