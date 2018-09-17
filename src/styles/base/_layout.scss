@@ -19,6 +19,27 @@
 
 .movie{
 
+    &__social--icons{
+
+        text-align: right;
+        padding: 1rem 0;
+
+        svg{
+
+            width: 18px;
+            opacity: .7;
+            transition: all .2s ease-in-out;
+
+            &:hover{
+
+                opacity: 1;
+
+            }
+
+        }
+
+    }
+
     &__description,  &__title{
 
         margin: 0;
